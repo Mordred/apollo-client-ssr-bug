@@ -26,3 +26,9 @@ To make changes in the GraphQL schema make sure to look at the `./src/index.jsx`
 4. Make the changes that will reproduce this error locally.
 5. When ready, push your changes back to GitHub and let the `apollo-client` team know where they can be found.
 
+# How To Start
+
+```sh
+npm install
+npm run start
+```
