@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "apollo-client-error-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/client": "3.4.9",
+    "@babel/cli": "7.14.8",
+    "@babel/core": "7.15.0",
+    "@babel/node": "7.14.9",
+    "@babel/preset-env": "7.15.0",
+    "@babel/preset-react": "7.14.5",
+    "concurrently": "6.2.1",
+    "cors": "2.8.5",
+    "cross-fetch": "3.1.4",
+    "express": "4.17.1",
+    "graphql": "^15.5.1",
+    "json-graphql-server": "2.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.1.8",
+    "react-scripts": "^4.0.3"
+  },
+  "scripts": {
+    "prestart": "react-app-rewired build",
+    "start": "concurrently \"npm:start:graphql\" \"npm:start:ssr\"",
+    "start:graphql": "babel-node graphql-server.js",
+    "start:ssr": "babel-node ssr-server.js",
+    "dev": "react-scripts start",
+    "build": "react-app-rewired build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
